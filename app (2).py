@@ -6,7 +6,8 @@ import seaborn as sns
 from sklearn.preprocessing import StandardScaler
 
 # load model
-model = pickle.load(open('rf_model.pkl','rb'))
+import os
+model = pickle.load(open(os.path.join(os.path.dirname(__file__), 'rf_model.pkl'), 'rb'))
 # title
 st.title('Heart attack risk classification app')
 
